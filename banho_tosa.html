@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de Cadastro</title>
+
+<!-- Link correto para o Bootstrap 5.3 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+<style>
+    body {
+        background-color: rgb(255, 222, 89); /* Amarelo claro */
+        color: rgb(0, 74, 173); /* Azul escuro */
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 20px;
+    }
+
+    .classe_botao {
+        width: auto;
+        margin-top: 10px;
+        background-color: rgb(0, 74, 173);
+        cursor: pointer;
+        color: white;
+    }
+
+    form {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    fieldset {
+        border: 2px solid rgb(0, 74, 173);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    legend {
+        color: rgb(0, 74, 173);
+    }
+/* Campo "Nome" com largura de 500px */
+    .class_nome {
+        width: 400%;
+        max-width: 950px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+     }
+    /* Demais campos com largura de 200px */
+    .class_input_num, select {
+        width: 100%;
+        max-width: 150px;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    label {
+        margin-right: 15px;
+    }
+
+    caption {
+        background-color: rgb(0, 74, 173);
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        padding: 2%;
+        margin-bottom: 10px;
+        caption-side: top; 
+        display: table-caption;
+        text-align: center;
+    }
+
+    table {
+        text-align: center;
+    }
+
+    th, td {
+        border: 1px solid rgb(0, 74, 173);
+        padding: 3px;
+    }
+
+    th {
+        width: 150px;
+    }
+
+    .center-content {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div id="banner" class="center-content">
+        <h2><strong>PET @ARROBA</strong> - o melhor para o seu pet.</h2>
+        <br>        
+    </div>
+    <center>
+        <table>
+            <caption> Valores de Banho e Tosa</caption>
+            <thead>
+                <tr>
+                    <th>Tamanho</th>
+                    <th>Banho</th>
+                    <th>Banho e Tosa</th>
+                </tr>
+            </thead>         
+            <tbody>
+                <tr>
+                    <td>Pequeno</td>
+                    <td>R$ 40,00</td>
+                    <td>R$ 60,00</td>
+                </tr>
+                <tr>
+                    <td>Médio</td>
+                    <td>R$ 60,00</td>
+                    <td>R$ 80,00</td>
+                </tr>
+                <tr>
+                    <td>Grande</td>
+                    <td>R$ 80,00</td>
+                    <td>R$ 100,00</td>
+                </tr>
+                <tr>
+                    <td>G Grande</td>
+                    <td>R$ 100,00</td>
+                    <td>R$ 120,00</td>
+                </tr>
+        
+        </tbody>
+    </table>
+    </center>
+<br><br>
+    <form action="https://formsubmit.co/lgkcladeira@gmail.com" method="POST">
+        <fieldset>
+            <legend>Dados do Pet</legend>
+            <label>Nome:</label>
+            <input type="text" name="Nome" placeholder="Nome do Pet" class="class_input_num" required>
+            <label>      </label><label>      </label><label>      </label><label>      </label>
+            <label>Alguma alergia?</label>
+            <select name="Alergia">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+                <option value="desconheco">Desconheço</option>
+            </select>
+            <label>      </label><label>      </label><label>      </label><label>      </label>
+            <label>Se sim, qual?</label>
+            <input type="text" name="Nome" placeholder="Alergia" class="class_input_num">
+            <label>      </label><label>      </label><label>      </label>
+            <br>
+            <label>Tamanho:</label>
+            <select name="Tamanho">
+                <option value="P">Pequeno</option>
+                <option value="M">Médio</option>
+                <option value="G">Grande</option>
+                <option value="GG">G Grande</option>
+            </select>    
+            <label>      </label><label>      </label><label>      </label><label>      </label>     
+            <label>Pet Taxi</label>
+            <input type="text" name="taxi" placeholder="Pet Taxi" class="class_input_num">
+            <label>      </label><label>      </label><label>      </label>
+            <label>Endereço Cadastrado?</label>
+            <select name="EndCad">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select> 
+            <label>Se não, qual endereço correto?</label>
+            <input type="text" name="taxi" placeholder="Endereço correto" class="class_input_num">
+            <label> </label><label> </label><label> </label><label> </label><label> </label><label> </label><label> </label><label> </label><label> </label>
+            <label>Data e Hora:</label>
+            <input type="datetime-local" class="class_input_num" required>
+            <br>
+            Caso tenha mais alguma observação</label>
+            <input type="text" name="obs" placeholder="Observação" class="class_nome">
+
+          
+            </select>
+            
+        </fieldset>
+
+        <div class="center-content">
+            <label>Volte à página inicial</label>
+            <button class="classe_botao btn btn-primary" onclick="window.location.href='PetShop.html';" type="button">Voltar</button>
+            
+            <label>Envio dos dados cadastrais</label>
+            <input class="classe_botao btn btn-primary" type="submit" value="Enviar">
+        </div>
+    </form>
+</body>
+</html>
